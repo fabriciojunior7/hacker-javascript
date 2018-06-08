@@ -21,6 +21,10 @@
 
 		?>
 
+		<script type="text/javascript">
+			setTimeout("location.reload(true);", 10000);
+		</script>
+
 	</body>
 
 </html>
