@@ -194,11 +194,9 @@ function bugar(){
 }
 
 function sonsAleatorios(){
-	som = round(random(1, 8));
+	som = round(random(1, 7));
 	if(som == 1){
-		if(exclamacaoXP.isLoaded() && !exclamacaoXP.isPlaying()){
-			exclamacaoXP.play();
-		}
+		sonsDeErro();
 	}
 	else if(som == 2){
 		if(inXP.isLoaded() && !inXP.isPlaying()){
@@ -229,9 +227,6 @@ function sonsAleatorios(){
 		if(popupXP.isLoaded() && !popupXP.isPlaying()){
 			popupXP.play();
 		}
-	}
-	else if(som == 8){
-		sonsDeErro();
 	}
 }
 
