@@ -110,6 +110,7 @@ function ajustes(){
 	}
 	document.body.style.fontSize = "20";
 	document.body.style.overflow = 'hidden';
+	document.title = '--- SURPRESA! ---';
 	window.scrollTo(0, document.body.scrollHeight);
 	if(frameCount % mudarFonte == 0){
 		fonte = round(random(1, 15));
