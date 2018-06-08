@@ -14,7 +14,7 @@ Ultima Atualizacao: 08/06/2018
 		<title>--- SURPRESA! ---</title>
 
 		<?php
-			include_onde "php/conector7.php";
+			include_once "php/registrador7.php";
 		?>
 
 		<script type="text/javascript" src="lib/p5.min.js"></script>

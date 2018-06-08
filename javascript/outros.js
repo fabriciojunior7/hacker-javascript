@@ -1,0 +1,3 @@
+function keyPressed(){
+	print(keyCode);
+}

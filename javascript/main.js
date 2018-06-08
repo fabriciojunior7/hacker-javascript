@@ -23,7 +23,7 @@ function setup(){
 	frameRate(120);
 	maxElementos = floor(windowWidth/18);
 	fonte = round(random(1, 15));
-	//noCanvas();
+	noCanvas();
 	carregarSons();
 }
 
