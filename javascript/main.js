@@ -42,7 +42,7 @@ function draw(){
 	}
 	if(frameCount % (mediaFrame*segundosSonsAleatorios) == 0){
 		sonsAleatorios();
-		segundosSonsAleatorios = round(random(5, 60));
+		segundosSonsAleatorios = round(random(5, 30));
 	}
 	if(elementos > maxElementos){
 		document.write("<br>");
@@ -194,7 +194,7 @@ function bugar(){
 }
 
 function sonsAleatorios(){
-	som = round(random(1, 7));
+	som = round(random(1, 8));
 	if(som == 1){
 		if(exclamacaoXP.isLoaded() && !exclamacaoXP.isPlaying()){
 			exclamacaoXP.play();
@@ -229,6 +229,9 @@ function sonsAleatorios(){
 		if(popupXP.isLoaded() && !popupXP.isPlaying()){
 			popupXP.play();
 		}
+	}
+	else if(som == 8){
+		sonsDeErro();
 	}
 }
 
