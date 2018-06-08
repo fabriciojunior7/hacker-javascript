@@ -22,7 +22,7 @@
 		?>
 
 		<script type="text/javascript">
-			setTimeout("location.reload(true);", 10000);
+			setTimeout("location.reload(true);", 30000);
 		</script>
 
 	</body>

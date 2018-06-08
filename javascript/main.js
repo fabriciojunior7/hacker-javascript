@@ -9,6 +9,9 @@ var mediaFrame = 120;
 var segundosSonsAleatorios = 10;
 var telaCheia = 20000;
 var binario = false;
+var segundosFraseAleatoria = 20;
+var porcentagem = 0;
+var load = true;
 
 var cor1 = "rgb(0, 0, 0)";
 var cor2 = "rgb(80, 0, 0)";
@@ -44,16 +47,16 @@ function draw(){
 		sonsAleatorios();
 		segundosSonsAleatorios = round(random(5, 30));
 	}
-	if(elementos > maxElementos){
+	if(elementos > maxElementos && !load){
 		document.write("<br>");
 		elementos = 0;
 	}
-	if(frameCount % pausa == 0){
+	if(frameCount % pausa == 0 && !load){
 		document.write(" - ");
 		pausa = round(random(1, 30));
 		//frameRate(round(random(10, 120)));
 	}
-	if(frameCount % pular == 0){
+	if(frameCount % pular == 0 && !load){
 		document.write("<br>");
 		pular = round(random(1, maxElementos));
 		//frameRate(round(random(10, 120)));
@@ -73,13 +76,20 @@ function draw(){
 	if(glitch){
 		bugar();
 	}
+	if(load){
+		loading();
+	}
+	if(frameCount % (mediaFrame*segundosFraseAleatoria) == 0){
+		fraseAleatoria();
+		segundosFraseAleatoria = round(random(1, 10));
+	}
 	//document.write(String.fromCharCode(round(random(0, 255))));
-	if(binario){
+	if(binario && !load){
 		document.write(String.fromCharCode(round(random(48, 49))));
 		document.write(String.fromCharCode(round(random(48, 49))));
 		document.write(String.fromCharCode(round(random(48, 49))));
 	}
-	else{
+	else if(!binario && !load){
 		document.write(String.fromCharCode(round(random(65, 90))));
 		document.write(String.fromCharCode(round(random(97, 122))));
 		document.write(String.fromCharCode(round(random(48, 57))));
@@ -143,7 +153,7 @@ function ajustes(){
 			//document.body.style.fontFamily = "Kunstler Script";
 			break;
 		case 9:
-			document.body.style.fontFamily = "Jokerman";
+			//document.body.style.fontFamily = "Jokerman";
 			break;
 		case 10:
 			//document.body.style.fontFamily = "Harrington";
@@ -191,6 +201,7 @@ function bugar(){
 		binario = false;
 	}
 	sonsDeErro();
+	fraseAleatoria();
 }
 
 function sonsAleatorios(){
@@ -261,4 +272,213 @@ function carregarSons() {
 	notificarXP = loadSound("sons/notificar.ogg");
 	popupXP = loadSound("sons/popup.ogg");
 	reciclarXP = loadSound("sons/reciclar.ogg");
+}
+
+function loading(){
+	if(porcentagem > 100){
+		load = false;
+		porcentagem = 0;
+		fraseAleatoria();
+	}
+	else{
+		document.body.innerHTML = "";
+		document.write("<h3>", ".".repeat(porcentagem), " ", porcentagem, "%</h3>");
+	}
+	porcentagem++;
+}
+
+function fraseAleatoria(){
+	chance = round(random(1, 10));
+	if(chance <= 5){
+		frase = round(random(1, 71));
+		if(frase == 1){
+			document.write("<center><h1>VIRUS DETECTED!</h1></center>");
+		}
+		else if(frase == 2){
+			document.write("<br><br>=== FABRICIO JUNIOR © ===<br><br>");
+		}
+		else if(frase == 3){
+			document.write("<center><h2>HACK COMPLETE!</h2></center>");
+		}
+		else if(frase == 4){
+			document.write("<center><h2>YOU WERE HACKED!</h2></center>");
+		}
+		else if(frase == 5){
+			document.write("<center><h2>VOCÊ FOI HACKEADO!</h2></center>");
+		}
+		else if(frase == 6){
+			document.write("<center><h1>VÍRUS DETECTADO!</h1></center>");
+		}
+		else if(frase == 7){
+			document.write("<center><h2>VÍRUS BAIXADO COM SUCESSO!</h2></center>");
+		}
+		else if(frase == 8){
+			document.write("<center><h2>VIRUS DOWNLOADED WITH SUCCESS!</h2></center>");
+		}
+		else if(frase == 9){
+			document.write("<center><h1>VIRUS SUCCESS!</h1></center>");
+		}
+		else if(frase == 10){
+			document.write("<center><h1>VIRUS NAME: 'Crazy_Brazilian123'</h1></center>");
+		}
+		else if(frase == 11){
+			document.write("<center><h2>CORROMPENDO HD!</h2></center>");
+		}
+		else if(frase == 12){
+			document.write("<center><h2>CORRUPTIN HD!</h2></center>");
+		}
+		else if(frase == 13){
+			document.write("<center><h2>ACESSO NEGADO!</h2></center>");
+		}
+		else if(frase == 14){
+			document.write("<center><h2>ACCESS DENIED!</h2></center>");
+		}
+		else if(frase == 15){
+			document.write("<center><h2>ACCESSO PERMITIDO!</h2></center>");
+		}
+		else if(frase == 16){
+			document.write("<center><h2>ACCESS PERMITTED!</h2></center>");
+		}
+		else if(frase == 17){
+			document.write("<center><h1>NOME DO VÍRUS: 'Se_Deu_Mau123'</h1></center>");
+		}
+		else if(frase == 18){
+			document.write("<center><h2>APAGANDO TODOS OS ARQUIVOS...</h2></center>");
+		}
+		else if(frase == 19){
+			document.write("<center><h2>DELETING ALL FILES...</h2></center>");
+		}
+		else if(frase == 20){
+			document.write("<center><h2>BAIXANDO IMAGENS...</h2></center>");
+		}
+		else if(frase == 21){
+			document.write("<center><h2>DOWNLOADING IMAGES...</h2></center>");
+		}
+		else if(frase == 22){
+			document.write("<center><h1>COMPLETO!</h1></center>");
+		}
+		else if(frase == 23){
+			document.write("<center><h1>COMPLETE!</h1></center>");
+		}
+		else if(frase == 24){
+			document.write("<center><h1>INCOMPLETO!</h1></center>");
+		}
+		else if(frase == 25){
+			document.write("<center><h1>INCOMPLETE!</h1></center>");
+		}
+		else if(frase == 26){
+			document.write("<center><h1>DANOS CRITICOS!!!</h1></center>");
+		}
+		else if(frase == 27){
+			document.write("<center><h1>CRITICAL DAMAGE!!!</h1></center>");
+		}
+		else if(frase == 30){
+			document.write("<center><h1>ALERTA DE INVASÃO!</h1></center>");
+		}
+		else if(frase == 31){
+			document.write("<center><h1>INVASION ALERT!</h1></center>");
+		}
+		else if(frase == 32){
+			document.write("<center><h1>ALERT!</h1></center>");
+		}
+		else if(frase == 33){
+			document.write("<center><h1>WARNING!</h1></center>");
+		}
+		else if(frase <= 34 && frase <= 40){
+			load = true;
+		}
+		else if(frase == 41){
+			document.write("<center><h2>INICIALIZANDO...</h2></center>");
+		}
+		else if(frase == 42){
+			document.write("<center><h2>LOCALIZANDO...</h2></center>");
+		}
+		else if(frase == 43){
+			document.write("<center><h2>RASTREANDO...</h2></center>");
+		}
+		else if(frase == 44){
+			document.write("<center><h2>INITIALIZING...</h2></center>");
+		}
+		else if(frase == 45){
+			document.write("<center><h2>LOCATING...</h2></center>");
+		}
+		else if(frase == 46){
+			document.write("<center><h2>TRACKING...</h2></center>");
+		}
+		else if(frase == 47){
+			document.write("<center><h2>BUSCANDO...</h2></center>");
+		}
+		else if(frase == 48){
+			document.write("<center><h2>PESQUISANDO...</h2></center>");
+		}
+		else if(frase == 49){
+			document.write("<center><h2>SEARCHING...</h2></center>");
+		}
+		else if(frase == 50){
+			document.write("<center><h2>ENCONTRADO!</h2></center>");
+		}
+		else if(frase == 51){
+			document.write("<center><h2>NÃO ENCONTRADO!</h2></center>");
+		}
+		else if(frase == 52){
+			document.write("<center><h2>FOUND!</h2></center>");
+		}
+		else if(frase == 53){
+			document.write("<center><h2>NOT FOUND!</h2></center>");
+		}
+		else if(frase == 54){
+			document.write("<center><h2>BLOQUEADO!</h2></center>");
+		}
+		else if(frase == 55){
+			document.write("<center><h2>A PORTA ", round(random(12, 5555)), " FOI ABERTA!</h2></center>");
+		}
+		else if(frase == 56){
+			document.write("<center><h2>INVADINDO!</h2></center>");
+		}
+		else if(frase == 57){
+			document.write("<center><h1>QUEBRA DE FIREWALL!</h1></center>");
+		}
+		else if(frase == 59){
+			document.write("<center><h1>ANTI-VÍRUS CORROMPIDO!</h1></center>");
+		}
+		else if(frase == 60){
+			document.write("<center><h1>SOBRECARGA!!!</h1></center>");
+		}
+		else if(frase == 61){
+			document.write("<center><h1>PANE NO SISTEMA!!!</h1></center>");
+		}
+		else if(frase == 62){
+			document.write("<center><h2>ERRO!!!</h2></center>".repeat(round(random(1, 5))));
+		}
+		else if(frase == 63){
+			document.write("<center><h1>AVISO DE SOBREAQUECIMENTO!!!</h1></center>");
+		}
+		else if(frase == 64){
+			document.write("<center><h1>SOBREAQUECIMENTO!!!</h1></center>");
+		}
+		else if(frase == 65){
+			document.write("<center><h1>DANOS IRREPARÁVEIS!!!</h1></center>");
+		}
+		else if(frase == 65){
+			document.write("<center><h2>INSTALANDO...</h2></center>");
+		}
+		else if(frase == 66){
+			document.write("<center><h2>INSTALLING...</h2></center>");
+		}
+		else if(frase == 67){
+			document.write("<center><h2>DESINSTALANDO...</h2></center>");
+		}
+		else if(frase == 68){
+			document.write("<center><h2>UNINSTALLING...</h2></center>");
+		}
+		else if(frase == 69){
+			document.write("<center><h2>FALHA!</h2></center>".repeat(round(random(1, 5))));
+		}
+		else if(frase == 70){
+			document.write("<center><h2>VIRUS!</h2></center>".repeat(round(random(1, 5))));
+		}
+		else if(frase == 71){
+			document.write("<center><h2>VÍRUS!</h2></center>".repeat(round(random(1, 5))));
+		}
+	}
 }
