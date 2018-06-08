@@ -11,8 +11,8 @@ var telaCheia = 20000;
 var binario = false;
 
 var cor1 = "rgb(0, 0, 0)";
-var cor2 = "rgb(50, 0, 0)";
-var cor3 = "rgb(0, 0, 50)";
+var cor2 = "rgb(80, 0, 0)";
+var cor3 = "rgb(0, 0, 80)";
 var corAtual = 1;
 
 //SONS
@@ -23,7 +23,7 @@ function setup(){
 	frameRate(120);
 	maxElementos = floor(windowWidth/18);
 	fonte = round(random(1, 15));
-	noCanvas();
+	//noCanvas();
 	carregarSons();
 }
 
@@ -42,7 +42,6 @@ function draw(){
 	}
 	if(frameCount % (mediaFrame*segundosSonsAleatorios) == 0){
 		sonsAleatorios();
-		print(mediaFrame*segundosSonsAleatorios);
 		segundosSonsAleatorios = round(random(5, 60));
 	}
 	if(elementos > maxElementos){
@@ -92,20 +91,23 @@ function ajustes(){
 	if(!glitch){
 		switch(corAtual){
 			case 1:
+				document.body.style.color = "rgb(0, 255, 0)";
 				document.body.style.backgroundColor = cor1;
 				break;
 			case 2:
+				document.body.style.color = "rgb(255, 255, 0)";
 				document.body.style.backgroundColor = cor2;
 				break;
 			case 3:
+				document.body.style.color = "white";
 				document.body.style.backgroundColor = cor3;
 				break;
 			case 4:
+				document.body.style.color = "rgb(0, 255, 0)";
 				document.body.style.backgroundColor = cor1;
 				break;
 		}
 	}
-	document.body.style.color = "rgb(0, 255, 0)";
 	document.body.style.fontSize = "20";
 	document.body.style.overflow = 'hidden';
 	window.scrollTo(0, document.body.scrollHeight);
