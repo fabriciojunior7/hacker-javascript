@@ -472,7 +472,7 @@ function fraseAleatoria(){
 			document.write("<center><h2>UNINSTALLING...</h2></center>");
 		}
 		else if(frase == 69){
-			document.write("<center><h2>FALHA!</h2></center>".repeat(round(random(1, 5))));
+			document.write("<center><h2 style='color: rgb(255, 0, 0);'>FALHA!</h2></center>".repeat(round(random(1, 5))));
 		}
 		else if(frase == 70){
 			document.write("<center><h2>VIRUS!</h2></center>".repeat(round(random(1, 5))));
