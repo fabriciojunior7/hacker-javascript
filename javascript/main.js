@@ -290,12 +290,12 @@ function loading(){
 function fraseAleatoria(){
 	chance = round(random(1, 10));
 	if(chance <= 5){
-		frase = round(random(1, 71));
+		frase = round(random(1, 72));
 		if(frase == 1){
-			document.write("<center><h1>VIRUS DETECTED!</h1></center>");
+			document.write("<center><h2>VIRUS DETECTED!</h2></center>");
 		}
 		else if(frase == 2){
-			document.write("<br><br>=== FABRICIO JUNIOR © ===<br><br>");
+			document.write("<br><font style='color: rgb(255, 255, 0);'>=== FABRICIO JUNIOR © ===</font><br>");
 		}
 		else if(frase == 3){
 			document.write("<center><h2>HACK COMPLETE!</h2></center>");
@@ -307,7 +307,7 @@ function fraseAleatoria(){
 			document.write("<center><h2>VOCÊ FOI HACKEADO!</h2></center>");
 		}
 		else if(frase == 6){
-			document.write("<center><h1>VÍRUS DETECTADO!</h1></center>");
+			document.write("<center><h2>VÍRUS DETECTADO!</h2></center>");
 		}
 		else if(frase == 7){
 			document.write("<center><h2>VÍRUS BAIXADO COM SUCESSO!</h2></center>");
@@ -316,7 +316,7 @@ function fraseAleatoria(){
 			document.write("<center><h2>VIRUS DOWNLOADED WITH SUCCESS!</h2></center>");
 		}
 		else if(frase == 9){
-			document.write("<center><h1>VIRUS SUCCESS!</h1></center>");
+			document.write("<center><h2>VIRUS SUCCESS!</h2></center>");
 		}
 		else if(frase == 10){
 			document.write("<center><h2>VIRUS NAME: 'Crazy_Brazilian123'</h2></center>");
@@ -355,34 +355,34 @@ function fraseAleatoria(){
 			document.write("<center><h2>DOWNLOADING IMAGES...</h2></center>");
 		}
 		else if(frase == 22){
-			document.write("<center><h1>COMPLETO!</h1></center>");
+			document.write("<center><h2>COMPLETO!</h2></center>");
 		}
 		else if(frase == 23){
-			document.write("<center><h1>COMPLETE!</h1></center>");
+			document.write("<center><h2>COMPLETE!</h2></center>");
 		}
 		else if(frase == 24){
-			document.write("<center><h1>INCOMPLETO!</h1></center>");
+			document.write("<center><h2>INCOMPLETO!</h2></center>");
 		}
 		else if(frase == 25){
-			document.write("<center><h1>INCOMPLETE!</h1></center>");
+			document.write("<center><h2>INCOMPLETE!</h2></center>");
 		}
 		else if(frase == 26){
-			document.write("<center><h1>DANOS CRITICOS!!!</h1></center>");
+			document.write("<center><h2 style='color: rgb(255, 0, 0);'>DANOS CRITICOS!!!</h2></center>");
 		}
 		else if(frase == 27){
-			document.write("<center><h1>CRITICAL DAMAGE!!!</h1></center>");
+			document.write("<center><h2 style='color: rgb(255, 0, 0);'>CRITICAL DAMAGE!!!</h2></center>");
 		}
 		else if(frase == 30){
-			document.write("<center><h1>ALERTA DE INVASÃO!</h1></center>");
+			document.write("<center><h2>ALERTA DE INVASÃO!</h2></center>");
 		}
 		else if(frase == 31){
-			document.write("<center><h1>INVASION ALERT!</h1></center>");
+			document.write("<center><h2>INVASION ALERT!</h2></center>");
 		}
 		else if(frase == 32){
-			document.write("<center><h1>ALERT!</h1></center>");
+			document.write("<center><h2>ALERT!</h2></center>");
 		}
 		else if(frase == 33){
-			document.write("<center><h1>WARNING!</h1></center>");
+			document.write("<center><h2>WARNING!</h2></center>");
 		}
 		else if(frase <= 34 && frase <= 40){
 			load = true;
@@ -436,28 +436,28 @@ function fraseAleatoria(){
 			document.write("<center><h2>INVADINDO!</h2></center>");
 		}
 		else if(frase == 57){
-			document.write("<center><h1>QUEBRA DE FIREWALL!</h1></center>");
+			document.write("<center><h2>QUEBRA DE FIREWALL!</h2></center>");
 		}
 		else if(frase == 59){
-			document.write("<center><h1>ANTI-VÍRUS CORROMPIDO!</h1></center>");
+			document.write("<center><h2>ANTI-VÍRUS CORROMPIDO!</h2></center>");
 		}
 		else if(frase == 60){
-			document.write("<center><h1>SOBRECARGA!!!</h1></center>");
+			document.write("<center><h2>SOBRECARGA!!!</h2></center>");
 		}
 		else if(frase == 61){
-			document.write("<center><h1>PANE NO SISTEMA!!!</h1></center>");
+			document.write("<center><h2>PANE NO SISTEMA!!!</h2></center>");
 		}
 		else if(frase == 62){
-			document.write("<center><h2>ERRO!!!</h2></center>".repeat(round(random(1, 5))));
+			document.write("<center><h2 style='color: rgb(255, 0, 0);'>ERRO!!!</h2></center>".repeat(round(random(1, 5))));
 		}
 		else if(frase == 63){
-			document.write("<center><h1>AVISO DE SOBREAQUECIMENTO!!!</h1></center>");
+			document.write("<center><h2>AVISO DE SOBREAQUECIMENTO!!!</h2></center>");
 		}
 		else if(frase == 64){
-			document.write("<center><h1>SOBREAQUECIMENTO!!!</h1></center>");
+			document.write("<center><h2>SOBREAQUECIMENTO!!!</h2></center>");
 		}
 		else if(frase == 65){
-			document.write("<center><h1>DANOS IRREPARÁVEIS!!!</h1></center>");
+			document.write("<center><h2>DANOS IRREPARÁVEIS!!!</h2></center>");
 		}
 		else if(frase == 65){
 			document.write("<center><h2>INSTALANDO...</h2></center>");
@@ -479,6 +479,9 @@ function fraseAleatoria(){
 		}
 		else if(frase == 71){
 			document.write("<center><h2>VÍRUS!</h2></center>".repeat(round(random(1, 5))));
+		}
+		else if(frase == 72){
+			document.write("<center><h2>ERROR 404 NOT FOUND</h2></center>");
 		}
 	}
 }
