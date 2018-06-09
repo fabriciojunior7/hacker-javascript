@@ -319,7 +319,7 @@ function fraseAleatoria(){
 			document.write("<center><h1>VIRUS SUCCESS!</h1></center>");
 		}
 		else if(frase == 10){
-			document.write("<center><h1>VIRUS NAME: 'Crazy_Brazilian123'</h1></center>");
+			document.write("<center><h2>VIRUS NAME: 'Crazy_Brazilian123'</h2></center>");
 		}
 		else if(frase == 11){
 			document.write("<center><h2>CORROMPENDO HD!</h2></center>");
@@ -340,7 +340,7 @@ function fraseAleatoria(){
 			document.write("<center><h2>ACCESS PERMITTED!</h2></center>");
 		}
 		else if(frase == 17){
-			document.write("<center><h1>NOME DO VÍRUS: 'Se_Deu_Mau123'</h1></center>");
+			document.write("<center><h2>NOME DO VÍRUS: 'Se_Deu_Mau123'</h2></center>");
 		}
 		else if(frase == 18){
 			document.write("<center><h2>APAGANDO TODOS OS ARQUIVOS...</h2></center>");
